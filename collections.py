@@ -163,6 +163,50 @@ def num_courses(dct):
 
 
 def courses(dct):
+    courses_list = []
+
+    for i in dct.values():
+        courses_list += i
+
+
+def most_courses(dct):
+
+    max_value = 0
+
+    for teacher in dct.items():
+
+        if len(teacher[1]) > max_value:
+            max_value = len(teacher[1])
+            busy_teacher = teacher[0]
+
+    return busy_teacher
+
+
+dct = {'Andrew Chalkley': ['jQuery Basics', 'Node.js Basics', 'Nell Basics'],
+'Kenneth Love': ['Python Basics', 'Python Collections']}
+
+
+
+"""In this last challenge, I want you to create a function named stats and 
+it'll take our teacher dictionary as its only argument.
+stats should return a list of lists where the first item in each inner list is 
+the teacher's name and the second item is the number of courses that teacher has. 
+For example, it might return: [["Kenneth Love", 5], ["Craig Dennis", 10]]"""
+
+def stats(dct):
+
+    stat_list = []
+
+    for item in dct.items():
+        stat = []
+        stat.append(item[0])
+        stat.append(len(item[1]))
+
+        stat_list.append(stat)
+
+    return stat_list
+
+
 
 
 
