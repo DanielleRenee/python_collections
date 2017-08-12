@@ -82,6 +82,10 @@ def string_factory(values):
 
     result_list = []
 
+# for each item in values (so each individual dictionary),
+# grab the key word arguements using ** and pass each keyword
+# in to the template via format method. 
+
     for i in values: 
         result_list.append(template.format(**i))
 
@@ -92,7 +96,80 @@ string_factory(values)
               # "Hi, I'm Michelangelo and I love to eat PIZZA!", 
               # "Hi, I'm Garfield and I love to eat lasagna!"
               # ]
-        
+
+
+
+# print out the keys in a dictionary
+for key in course: 
+    print key
+
+for key in course.keys():
+    print key
+
+# print out the values in a dictionary
+for key in course: 
+    print course[key]
+
+for value in course.values():
+    print value
+
+# get a list of tuples with keys and value from a dictionary
+course.items()
+
+# return key value tuples themselves
+for item in course.items():
+    print item
+
+
+"""make a function named word_count. 
+It should accept a single argument which will be a string. 
+The function needs to return a dictionary. 
+The keys in the dictionary will be each of the words in the string, lowercased. 
+The values will be how many times that particular word appears in the string."""
+
+def word_count(string):
+
+    counts = {}
+
+    for word in string.split(): 
+        if word.lower() in counts:
+            counts[word.lower()] += 1
+        else: 
+            counts[word.lower()] = 1
+
+    return counts
+
+
+
+"""For this first task, create a function named num_teachers that takes 
+a single argument, which will be a dictionary of Treehouse teachers 
+and their courses. The num_teachers function should return an integer 
+for how many teachers are in the dict."""
+
+dct = {'Andrew Chalkley': ['jQuery Basics', 'Node.js Basics'],
+'Kenneth Love': ['Python Basics', 'Python Collections']}
+
+def num_teachers(dct):
+
+    return len(dct.keys())
+
+
+def num_courses(dct):
+    num = 0
+    for i in dct.values():
+        num += len(i)
+
+    return num
+
+
+def courses(dct):
+
+
+
+
+
+
+
 
 
 
