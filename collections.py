@@ -242,6 +242,33 @@ a, b = b, a
 # in that tuple were the values 20 and 5
 # and then python unpacked that tuple in to two variables, a and b
 
+"""packing tuples with *"""
+
+def add(*nums):
+    total = 0
+    for num in nums:
+        total += num
+    return total
+
+# add(5, 5) will return 10
+# add(32) will return 32
+
+
+# more common is to use args for the same outcome
+
+def add(base, *args):
+    total = base
+    for num in args:
+        total += num
+    return total
+
+
+# add(5, 20) will return 25
+
+# with the exception of **kwargs, *args has come after any other params
+# would need to be
+# def add(*args, **kwargs):
+
 
 
 
