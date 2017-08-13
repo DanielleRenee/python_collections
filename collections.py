@@ -230,6 +230,19 @@ tuple_with_a_list[2][0] = 2
 # can do whatever I want to the inside of the list inside the tuple,
 # BUT cannot delete the list inside the tuple, because that would be changing the tuple. 
 
+a = 5
+b = 20 
+
+# want to switch the values of a and b 
+# little python magic
+
+a, b = b, a
+
+# python makes a tuple right after the equal sign.
+# in that tuple were the values 20 and 5
+# and then python unpacked that tuple in to two variables, a and b
+
+
 
 
 
