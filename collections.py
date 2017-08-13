@@ -207,6 +207,29 @@ def stats(dct):
     return stat_list
 
 
+# TUPLES
+my_tuple = 1, 2, 3
+# same as
+my_same_tuple = (1, 2, 3)
+
+my_third_tuple = (5,)
+# not same as
+my_int_not_tuple = (5)
+
+# or can use the tuple function
+my_fourth_tuple = tuple([1, 2, 3,])
+
+# can't add, change value or reassign indexes for a tuple
+# can however change value of an item inside of the tuple
+
+# can count and and check index
+
+tuple_with_a_list = (1, 'apple', [3, 4, 5])
+tuple_with_a_list[2][0] = 2 
+
+# can do whatever I want to the inside of the list inside the tuple,
+# BUT cannot delete the list inside the tuple, because that would be changing the tuple. 
+
 
 
 
