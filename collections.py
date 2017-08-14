@@ -270,6 +270,39 @@ def add(base, *args):
 # def add(*args, **kwargs):
 
 
+def fun(*args):
+    """simple args example"""
+    for arg in args:
+        print arg
+
+my_list = [4, 5, 'apple', 'blue', 2]
+
+fun(my_list) 
+# will print out the list in tact
+# but if I call 
+fun(*my_list) 
+# it will take all the items 
+# in my list as arguments and pass them in and therefore print 
+# each item in the list out
+
+
+"""Create a function named multiply that takes any number of arguments. 
+Return the product (multiplied value) of all of the supplied arguments. 
+The type of argument shouldn't matter."""
+
+def multiply(*args):
+    total = 1
+    for arg in args:
+        total = total * arg
+    return total
+
+
+
+"""Create a function that takes in a string and returns a tuple of
+versions of that string. Uppercase, lowercase, title case and reversed string."""
+
+def stringcases(string):
+    return string.upper(), string.lower(), string.title(), string[::-1]
 
 
 
