@@ -328,9 +328,66 @@ def combo(a, b):
 
 
 
+"""Set math"""
+
+songs = {'songy song','darling song','sweets song'}
+
+songs.add('Treehouse Hula')
+
+songs.update({"Python Two-Step", "Ruby Rhumba"}, {"My PDF Files"})
+
+# | or .union(*others) - all of the items from all of the sets
+# & or .intersection(*others) - returns a new set of all of the common items between all of the sets
+# - or .difference(*others) - all of the items in the first set that are not in the other sets
+# ^ or .symmetric_difference(other) - all of the items that are not shared by the two sets
+# (also: notice how those are using *others? That's a tuple of other sets.)
+
+# can do them all as operators and methods
+
+set1 = set(range(10))
+
+set2 = {1, 2, 3, 5, 7, 9, 11, 13, 17, 19, 23}
+
+>>> set1.union(set2)
+set([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 13, 17, 19, 23])
+
+>>> set2 - set1
+set([19, 17, 11, 13, 23])
 
 
 
+"""So, first, write a function named covers that accepts a single parameter, 
+a set of topics. Have the function return a list of courses from COURSES 
+where the supplied set and the course's value (also a set) overlap.
+For example, covers({"Python"}) would return ["Python Basics"]."""
+
+
+COURSES = {
+    "Python Basics": {"Python", "functions", "variables",
+                      "booleans", "integers", "floats",
+                      "arrays", "strings", "exceptions",
+                      "conditions", "input", "loops"},
+    "Java Basics": {"Java", "strings", "variables",
+                    "input", "exceptions", "integers",
+                    "booleans", "loops"},
+    "PHP Basics": {"PHP", "variables", "conditions",
+                   "integers", "floats", "strings",
+                   "booleans", "HTML"},
+    "Ruby Basics": {"Ruby", "strings", "floats",
+                    "integers", "conditions",
+                    "functions", "input"}
+}
+
+
+def covers(topics):
+    courses_list = []   
+
+    for course in COURSES:
+        
+        if COURSES[course] & topics:   # Here the & sign finds the overlaps of the two sets.
+            courses_list.append(course)
+
+    return courses_list
 
 
 
