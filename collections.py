@@ -391,7 +391,24 @@ def covers(topics):
 
 
 
+# OK, let's create something a bit more refined. 
+# Create a new function named covers_all that takes a single set as an argument. 
+# Return the names of all of the courses, in a list, 
+# where all of the topics in the supplied set are covered.
+# For example, covers_all({"conditions", "input"}) 
+# would return ["Python Basics", "Ruby Basics"]. Java Basics and PHP Basics 
+# would be exclude because they don't include both of those topics.
 
+
+def covers_all(topics):
+    courses_list = []   
+
+    for course in COURSES:
+        
+        if (COURSES[course] & topics) == topics:   # Here the & sign finds the overlaps of the two sets.
+            courses_list.append(course)
+
+    return courses_list
 
 
 
