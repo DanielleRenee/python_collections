@@ -412,6 +412,21 @@ def covers_all(topics):
 
 
 
+"""USING RANDOM
+sample takes two arguments, the first is a an iterable to sample from, second is 
+an integer of how many unique samples to return.
+"""
+
+import random
+
+cells = [4, 5, 56, 34, 23, 1, 87, 60, 5, 8, 29, 13]
+
+def random_select(cells):
+
+    return random.sample(cells, 3)
+
+
+
 
 
 
