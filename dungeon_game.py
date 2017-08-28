@@ -1,6 +1,8 @@
 import os
 import random
 
+#may not work in python 2.7, double check
+
 # draw grid
 # pick random location for player
 # pick random location for exit door
